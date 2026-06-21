@@ -3,6 +3,7 @@
 Reproducibility repository for the manuscript **Water Network Leakage-Oriented SCADA Assessment Using Pump-Derived Operating Context**.
 
 ## Repository structure
+
 ```text
 .
 ├── README.md
@@ -13,23 +14,32 @@ Reproducibility repository for the manuscript **Water Network Leakage-Oriented S
     ├── Leak-2018.ipynb
     └── Leak-2019.ipynb
 ```
+
 ## Contents
 
 This repository contains the Jupyter notebooks used for the case study. The notebooks reproduce the empirical workflow for pump-derived operating-state construction, baseline-conditioned flow-deviation assessment, pressure-deficit assessment, leakage-oriented validation, and temporal replication.
 
-The input data are not stored in this repository. They must be downloaded separately from the original BattLeDIM / L-Town data source and placed in the expected local data folder before running the notebooks.
+The input data are not stored in this repository. They must be downloaded separately from the original BattLeDIM / L-Town data source and placed in the local working folder before running the notebooks.
 
 ## Usage
 
-Open the notebooks in the notebooks/ folder.
+Open the notebooks in the `notebooks/` folder.
 
 Run the 2018 notebook first:
-- Leak-2018.ipynb
+
+```text
+Leak-2018.ipynb
+```
 
 Then run the 2019 notebook:
-- Leak-2019.ipynb
+
+```text
+Leak-2019.ipynb
+```
 
 The notebooks are intended to be run sequentially from top to bottom. The 2018 notebook contains the main case-study workflow, including network-based signal selection and pump-state construction. The 2019 notebook contains the temporal replication workflow using the same empirical assessment protocol.
+
+When running the notebooks directly from the `notebooks/` folder, place the required BattLeDIM / L-Town SCADA, leakage, and network files in the same folder as the notebooks, unless the file paths are modified in the notebooks.
 
 ## Data note
 
@@ -37,7 +47,7 @@ The case study uses the BattLeDIM / L-Town benchmark data set, including SCADA f
 
 ## Original data source
 
-Vrachimis, S. G., Eliades, D. G., Taormina, R., Ostfeld, A., Kapelan, Z., Liu, S., Kyriakou, M. S., Pavlou, P., Qiu, M., & Polycarpou, M. M. (2020). Dataset of BattLeDIM: Battle of the Leakage Detection and Isolation Methods. Zenodo. https://doi.org/10.5281/zenodo.4017659
+Vrachimis, S. G., Eliades, D. G., Taormina, R., Ostfeld, A., Kapelan, Z., Liu, S., Kyriakou, M. S., Pavlou, P., Qiu, M., & Polycarpou, M. M. (2020). *Dataset of BattLeDIM: Battle of the Leakage Detection and Isolation Methods*. Zenodo. https://doi.org/10.5281/zenodo.4017659
 
 ## Environment
 
@@ -50,6 +60,18 @@ conda env create -f environment.yml
 conda activate water-scada-leakage-pump-context
 ```
 
-## Original framework source
+Using pip:
 
-in pub-process
+```bash
+pip install -r requirements.txt
+```
+
+After creating the environment, open the notebooks from the `notebooks/` folder and run the cells sequentially.
+
+## Manuscript status
+
+The manuscript associated with this repository is currently in the publication process.
+
+## License
+
+Please refer to the repository license file. The original BattLeDIM / L-Town data set should be used in accordance with the terms of its original Zenodo release.
