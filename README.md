@@ -3,9 +3,12 @@
 Reproducibility repository for the manuscript **Water Network Leakage-Oriented SCADA Assessment Using Pump-Derived Operating Context**.
 
 ## Repository structure
-
 ```text
 .
+├── README.md
+├── LICENSE
+├── environment.yml
+├── requirements.txt
 └── notebooks/
     ├── Leak-2018.ipynb
     └── Leak-2019.ipynb
@@ -21,12 +24,10 @@ The input data are not stored in this repository. They must be downloaded separa
 Open the notebooks in the notebooks/ folder.
 
 Run the 2018 notebook first:
-
-Leak-2018.ipynb
+- Leak-2018.ipynb
 
 Then run the 2019 notebook:
-
-Leak-2019.ipynb
+- Leak-2019.ipynb
 
 The notebooks are intended to be run sequentially from top to bottom. The 2018 notebook contains the main case-study workflow, including network-based signal selection and pump-state construction. The 2019 notebook contains the temporal replication workflow using the same empirical assessment protocol.
 
@@ -37,6 +38,17 @@ The case study uses the BattLeDIM / L-Town benchmark data set, including SCADA f
 ## Original data source
 
 Vrachimis, S. G., Eliades, D. G., Taormina, R., Ostfeld, A., Kapelan, Z., Liu, S., Kyriakou, M. S., Pavlou, P., Qiu, M., & Polycarpou, M. M. (2020). Dataset of BattLeDIM: Battle of the Leakage Detection and Isolation Methods. Zenodo. https://doi.org/10.5281/zenodo.4017659
+
+## Environment
+
+The notebooks can be run either with Conda using `environment.yml` or with pip using `requirements.txt`.
+
+Using Conda:
+
+```bash
+conda env create -f environment.yml
+conda activate water-scada-leakage-pump-context
+```
 
 ## Original framework source
 
