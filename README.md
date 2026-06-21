@@ -1,4 +1,4 @@
-# Water SCADA Leakage Assessment Using Pump-Derived Operating Context
+# Water Network Leakage-Oriented SCADA Assessment Using Pump-Derived Operating Context
 
 Reproducibility repository for the manuscript **Water Network Leakage-Oriented SCADA Assessment Using Pump-Derived Operating Context**.
 
