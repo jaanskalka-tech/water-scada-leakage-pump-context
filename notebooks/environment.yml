@@ -1,0 +1,14 @@
+name: water-scada-leakage-pump-context 
+
+channels: 
+- conda-forge 
+
+dependencies: 
+- python=3.11 
+- jupyterlab 
+- notebook 
+- ipykernel 
+- numpy 
+- pandas 
+- matplotlib 
+- scikit-learn
